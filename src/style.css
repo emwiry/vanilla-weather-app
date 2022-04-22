@@ -21,6 +21,9 @@ li {
   margin: 0 auto;
   margin-bottom: 5px;
   padding: 0;
+}
+
+li:first-letter {
   text-transform: capitalize;
 }
 
