@@ -63,16 +63,21 @@ li:first-letter {
   top: -34px;
 }
 
-.weather-temperature .active {
-  color: #272142;
-  cursor: default;
-}
-
 #fahrenheit-link {
+  color: #777575;
   text-decoration: none;
 }
 
 #celsius-link {
-  text-decoration: none;
+  color: #000;
   cursor: pointer;
+  text-decoration: none;
+}
+
+#fahrenheit-link:hover {
+  color: #000;
+}
+
+#celsius-link:hover {
+  color: #777575;
 }
