@@ -13,7 +13,7 @@ ul {
 }
 
 li {
-  color: #ceccd3;
+  color: #777575;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -65,20 +65,25 @@ li:first-letter {
 }
 
 #fahrenheit-link {
-  color: #777575;
+  color: #000;
   text-decoration: none;
 }
 
 #celsius-link {
-  color: #000;
+  color: #036767;
   cursor: pointer;
   text-decoration: none;
 }
 
 #fahrenheit-link:hover {
-  color: #000;
+  color: #036767;
 }
 
 #celsius-link:hover {
-  color: #777575;
+  color: #000;
+}
+
+#github-link,
+#netlify-link {
+  color: #036767;
 }
