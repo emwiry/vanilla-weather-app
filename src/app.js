@@ -27,7 +27,7 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
   let month = months[date.getMonth()];
-  return `${day}, ${month} ${now}, 
+  return `Last updated at: ${day}, ${month} ${now}, 
   ${date.toLocaleString("en-US", {
     hour: "numeric",
     minute: "numeric",
