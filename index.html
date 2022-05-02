@@ -10,6 +10,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla Weather App</title>
@@ -58,7 +64,7 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
+                <li id="hum">Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> mph</li>
               </ul>
             </div>
@@ -66,7 +72,7 @@
           <div class="weather-forecast" id="forecast"></div>
         </div>
         <small>
-          This project was coded by Emily Angel and is
+          This project was coded by Emily Angel, and is
           <a
             href="https://github.com/emwiry/vanilla-weather-app"
             target="_blank"
@@ -78,7 +84,7 @@
             target="_blank"
             id="netlify-link"
           >
-            hosted on Netlify</a
+            hosted on Netlify!</a
           >
         </small>
       </div>

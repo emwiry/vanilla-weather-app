@@ -1,13 +1,7 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let now = date.getDate();
+
   let days = [
     "Sunday",
     "Monday",
@@ -17,8 +11,28 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  let month = months[date.getMonth()];
+  return `${day}, ${month} ${now}, 
+  ${date.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  })}`;
 }
 
 function formatDay(timestamp) {
@@ -41,14 +55,14 @@ function displayForecast(response) {
         forecastHTML +
         `
     <div class="col-2">
-      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+      <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
       <img
         src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png"
         alt=""
         width="42"
-      />
+        />
       <div class="weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max"> 
         ${Math.round(forecastDay.temp.max)}° </span>
